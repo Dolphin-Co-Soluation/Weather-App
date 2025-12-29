@@ -1,0 +1,39 @@
+{
+    "city": "Colombo",
+    "current_weather": {
+        "city": "Colombo",
+        "country": "LK",
+        "temperature": 27.8,
+        "feels_like": 30.79,
+        "humidity": 74,
+        "description": "broken clouds",
+        "icon": "04n",
+        "wind_speed": 6.77,
+        "timestamp": "2025-12-29T20:11:03.987431"
+    },
+    "forecast": [
+        {
+            "date": "2025-12-29",
+            "temperature": 27.8,
+            "description": "light rain",
+            "icon": "10n",
+            "humidity": 74
+        },
+        {
+            "date": "2025-12-30",
+            "temperature": 26.27,
+            "description": "scattered clouds",
+            "icon": "03n",
+            "humidity": 83
+        },
+        {
+            "date": "2025-12-31",
+            "temperature": 26.12,
+            "description": "light rain",
+            "icon": "10n",
+            "humidity": 81
+        }
+    ],
+    "heat_alert": false,
+    "cached_at": "2025-12-29T20:11:05.078109"
+}
