@@ -1,0 +1,39 @@
+{
+    "city": "Trincomalee",
+    "current_weather": {
+        "city": "Trincomalee",
+        "country": "LK",
+        "temperature": 26.24,
+        "feels_like": 26.24,
+        "humidity": 83,
+        "description": "overcast clouds",
+        "icon": "04n",
+        "wind_speed": 7.33,
+        "timestamp": "2025-12-29T20:23:10.300801"
+    },
+    "forecast": [
+        {
+            "date": "2025-12-29",
+            "temperature": 26.24,
+            "description": "overcast clouds",
+            "icon": "04n",
+            "humidity": 83
+        },
+        {
+            "date": "2025-12-30",
+            "temperature": 25.81,
+            "description": "light rain",
+            "icon": "10n",
+            "humidity": 87
+        },
+        {
+            "date": "2025-12-31",
+            "temperature": 26.24,
+            "description": "overcast clouds",
+            "icon": "04n",
+            "humidity": 80
+        }
+    ],
+    "heat_alert": false,
+    "cached_at": "2025-12-29T20:23:10.981662"
+}
