@@ -1,39 +1,39 @@
 {
-    "city": "Colombo",
+    "city": "Trincomalee",
     "current_weather": {
-        "city": "Colombo",
+        "city": "Trincomalee",
         "country": "LK",
-        "temperature": 27.8,
-        "feels_like": 30.79,
-        "humidity": 74,
-        "description": "broken clouds",
+        "temperature": 26.24,
+        "feels_like": 26.24,
+        "humidity": 83,
+        "description": "overcast clouds",
         "icon": "04n",
-        "wind_speed": 6.77,
-        "timestamp": "2025-12-29T20:11:03.987431"
+        "wind_speed": 7.33,
+        "timestamp": "2025-12-29T20:23:10.300801"
     },
     "forecast": [
         {
             "date": "2025-12-29",
-            "temperature": 27.8,
-            "description": "light rain",
-            "icon": "10n",
-            "humidity": 74
-        },
-        {
-            "date": "2025-12-30",
-            "temperature": 26.27,
-            "description": "scattered clouds",
-            "icon": "03n",
+            "temperature": 26.24,
+            "description": "overcast clouds",
+            "icon": "04n",
             "humidity": 83
         },
         {
-            "date": "2025-12-31",
-            "temperature": 26.12,
+            "date": "2025-12-30",
+            "temperature": 25.81,
             "description": "light rain",
             "icon": "10n",
-            "humidity": 81
+            "humidity": 87
+        },
+        {
+            "date": "2025-12-31",
+            "temperature": 26.24,
+            "description": "overcast clouds",
+            "icon": "04n",
+            "humidity": 80
         }
     ],
     "heat_alert": false,
-    "cached_at": "2025-12-29T20:11:05.078109"
+    "cached_at": "2025-12-29T20:23:10.981662"
 }
