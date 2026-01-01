@@ -24,6 +24,11 @@ class WeatherService:
             
             data = response.json()
             
+            # Calculate local time based on timezone
+            timezone_offset = data['timezone']  # Offset in seconds
+            utc_time = datetime.utcnow()
+            local_time = datetime.utcfromtimestamp(data['dt'] + timezone_offset)
+            
             weather_data = {
                 'city': data['name'],
                 'country': data['sys']['country'],
@@ -33,6 +38,9 @@ class WeatherService:
                 'description': data['weather'][0]['description'],
                 'icon': data['weather'][0]['icon'],
                 'wind_speed': data['wind']['speed'],
+                'timezone': timezone_offset,
+                'local_time': local_time.strftime('%I:%M:%S %p'),
+                'local_time_short': local_time.strftime('%I:%M %p'),
                 'timestamp': datetime.now().isoformat()
             }
             

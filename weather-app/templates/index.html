@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasts - Beautiful Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Mobile Navigation Bar -->
+        <div class="navbar">
+            <div class="nav-item">
+                <span class="nav-icon">📍</span>
+            </div>
+            <div class="nav-center"></div>
+            <div class="nav-item">
+                <span class="nav-icon">☰</span>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Search city..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+            <div id="errorMsg" class="error-message"></div>
+        </div>
+
+        <!-- Main Weather Display -->
+        <div class="weather-display" id="weatherDisplay" style="display: none;">
+            <!-- Location Header -->
+            <div class="location-header">
+                <h2 id="cityName">---</h2>
+                <p id="weatherDescription">---</p>
+                <div class="time-display">
+                    <span id="localTime" class="local-time">--:--</span>
+                </div>
+            </div>
+
+            <!-- Large Temperature Display -->
+            <div class="temperature-large">
+                <div class="weather-icon-large" id="weatherIconLarge">🌤️</div>
+                <div class="temperature-value" id="temperatureLarge">--°</div>
+            </div>
+
+            <!-- Weather Details Grid -->
+            <div class="weather-info-grid">
+                <div class="info-box">
+                    <div class="info-label">Precipitation</div>
+                    <div class="info-value" id="precipitation">--%</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Max/Min</div>
+                    <div class="info-value" id="tempRange">--°/--°</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Humidity</div>
+                    <div class="info-value" id="humidityValue">--%</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Wind Speed</div>
+                    <div class="info-value" id="windSpeedValue">-- m/s</div>
+                </div>
+            </div>
+
+            <!-- Today's Hourly Forecast -->
+            <div class="forecast-section">
+                <div class="section-header">
+                    <h3>Today</h3>
+                    <span id="forecastDate">Today</span>
+                </div>
+                <div class="hourly-forecast" id="hourlyForecast">
+                    <!-- Hourly cards will be inserted here -->
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div class="forecast-section">
+                <div class="section-header">
+                    <h3>7-Days Forecasts</h3>
+                </div>
+                <div class="forecast-carousel">
+                    <button class="carousel-btn prev">‹</button>
+                    <div class="forecast-container" id="forecastContainer">
+                        <!-- Forecast cards will be inserted here -->
+                    </div>
+                    <button class="carousel-btn next">›</button>
+                </div>
+            </div>
+
+            <!-- Air Quality & Additional Info -->
+            <div class="additional-info">
+                <div class="info-section">
+                    <div class="section-header">
+                        <h3>☀️ Air Quality</h3>
+                    </div>
+                    <div class="air-quality-box">
+                        <div class="aqi-value" id="aqiValue">--</div>
+                        <div class="aqi-label" id="aqiLabel">Good</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-header">
+                        <h3>🌅 Sun Times</h3>
+                    </div>
+                    <div class="sun-times">
+                        <div class="sun-item">
+                            <span class="sun-label">Sunrise</span>
+                            <span class="sun-time" id="sunriseTime">--:--</span>
+                        </div>
+                        <div class="sun-divider"></div>
+                        <div class="sun-item">
+                            <span class="sun-label">Sunset</span>
+                            <span class="sun-time" id="sunsetTime">--:--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-header">
+                        <h3>☢️ UV Index</h3>
+                    </div>
+                    <div class="uv-index-box">
+                        <div class="uv-value" id="uvValue">--</div>
+                        <div class="uv-label" id="uvLabel">Moderate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Initial Welcome State -->
+        <div class="welcome-state" id="welcomeState">
+            <div class="welcome-icon">🌍</div>
+            <h2 class="welcome-title">Weather<span class="highlight">Forecasts</span></h2>
+            <p class="welcome-subtitle">Get real-time weather with beautiful animations</p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
